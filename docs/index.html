@@ -28,7 +28,7 @@
   </head>
   <body class="bg-black text-white p-0 m-0">
     <nav
-      class="w-full absolute md:h-24 md:px-24 h-16 px-5 flex justify-between items-center md:gap-10 gap-3 text-2xl z-50"
+      class="w-full fixed md:h-24 md:px-24 h-16 px-5 flex justify-between items-center md:gap-10 gap-3 text-2xl z-50"
     >
       <div class="flex justify-center items-center gap-1 md:text-2xl text-xs">
         <i class="fa-solid fa-film text-secondary"></i>
@@ -40,7 +40,7 @@
         <input
           type="search"
           placeholder=" Find movie"
-          class="md:w-[80%] w-[70%] md:p-2 bg-transparent focus:outline-none  md:text-base text-[8px] search"
+          class="md:w-[80%] w-[70%] md:p-2 px-1 md:px-2 bg-transparent focus:outline-none  md:text-base text-[8px] search"
         />
 
         <i
@@ -130,8 +130,8 @@
       <div
         class="w-[90vw] mx-auto flex md:text-2xl text-base items-center gap-2 py-4"
       >
-        <i class="fa-solid fa-clock text-secondary"></i>
-        <p class="font-homenaje">Now playing movies</p>
+        <!-- <i class="fa-solid fa-clock text-secondary"></i>
+        <p class="font-homenaje">Now playing movies</p> -->
       </div>
 
       <div class="moviesList w-[90vw] mx-auto">
@@ -140,18 +140,18 @@
         ></div>
       </div>
     </section>
-    <section id="contact" class="md:mb-10 md:mt-20 mt-0   h-[70vh] mb-3">
-      <div class="w-[90vw] h-full mx-auto grid md:grid-cols-2 md:grid-rows-1 grid-rows-3 gap-10 text-base">
-        <div class="w-full h-full  flex md:justify-end   row-span-2 md:row-span-1">
+    <section id="contact" class="md:mb-10 md:mt-20 mt-10">
+      <div class="w-[90vw] mx-auto md:grid flex flex-col  md:grid-cols-2 md:grid-rows-1 grid-rows-3 md:gap-10 gap-4 text-base">
+        <div class="w-full  flex flex-col md:justify-end justify-center items-center md:items-end  row-span-2 md:row-span-1">
           <form
-          class="h-[40vh] md:h-auto  self-end md:self-auto bg-white/10 rounded-lg md:p-10 md:w-[80%] w-[95%] flex flex-col justify-center items-center md:gap-4 gap-2 "
+          class="  md:h-auto   md:self-auto bg-white/10 rounded-lg md:p-10 p-2 md:w-[80%] w-[95%] flex flex-col justify-center items-center md:gap-4 gap-2 "
           >
           <div class="md:w-[80%] w-[95%]">
             <input
             type="text"
             id="name"
             placeholder=" Enter your name"
-            class="w-full rounded md:p-2 bg-black  md:text-base text-[8px] "
+            class="w-full rounded md:p-2 px-1 md:px-2 bg-black  md:text-base text-[8px] "
           />
           <p id="nameMsg" class="text-red-500 md:text-xs text-[6px]"></p>
           </div>
@@ -161,7 +161,7 @@
               type="email"
               id="email"
               placeholder=" Enter your email"
-              class="w-full  rounded md:p-2 bg-black  md:text-base text-[8px]  "
+              class="w-full  rounded md:p-2 px-1 md:px-2 bg-black  md:text-base text-[8px]  "
             />
               <p id="emailMsg" class="text-red-500 md:text-xs text-[6px]"></p>
             </div>
@@ -171,7 +171,7 @@
               type="number"
               id="phone"
               placeholder=" Enter your phone number"
-              class="w-full rounded md:p-2 bg-black md:text-base text-[8px] "
+              class="w-full rounded md:p-2 px-1 md:px-2 bg-black md:text-base text-[8px] "
             />
             <p id="phoneMsg" class="text-red-500 md:text-xs text-[6px]"></p>
           </div>
@@ -183,7 +183,7 @@
               min="6"
               max="120"
               placeholder=" Enter your age"
-              class=" rounded md:p-2 bg-black  md:text-base text-[8px] "
+              class=" rounded md:p-2 px-1 md:px-2 bg-black  md:text-base text-[8px] "
             />
             <p id="ageMsg" class="text-red-500 md:text-xs text-[6px]"></p>
              
@@ -195,7 +195,7 @@
                   type="password"
                   id="password"
                   placeholder="Enter your password"
-                  class=" md:p-2 bg-black w-[90%] focus:outline-none rounded"
+                  class=" md:p-2 px-1 md:px-2 bg-black w-[90%] focus:outline-none rounded"
                 />
                 <i id="passwordbtn" class="fa-solid cursor-pointer fa-eye"></i>
               </div>
@@ -227,7 +227,7 @@
             </div>
           </form>
           </div>
-          <div class="w-full md:h-full flex justify-start items-center ">
+          <div class="w-full md:h-full flex justify-start items-center row-span-1">
             <div class="flex flex-col gap-5 md:text-base text-xs   mb-5 md:mb-0">
               <div class="flex gap-2  items-center">
                  <div class="md:h-12 md:w-12  h-10 w-8 flex justify-center items-center  text-secondary bg-white/10  rounded">
