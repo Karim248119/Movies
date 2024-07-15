@@ -43,7 +43,7 @@ const IMG185 = (path) =>
   path ? `https://image.tmdb.org/t/p/w185${path}` : null;
 
 fetchMovieDetails = async (movieId) => {
-  const res = await fetch(movieDetailsEndpoint(movieId || 389));
+  const res = await fetch(movieDetailsEndpoint(movieId));
   const movie = await res.json();
   const poster = document.querySelector(".details img");
   const title = document.querySelector(".details h2");
