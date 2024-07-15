@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Homenaje&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-black text-white p-0 m-0">
+    <nav
+      class="w-full fixed md:h-24 md:px-24 h-16 px-5 flex justify-between items-center md:gap-10 gap-3 text-2xl z-50"
+    >
+      <div class="flex justify-center items-center gap-1 md:text-2xl text-xs">
+        <i class="fa-solid fa-film text-secondary"></i>
+        <h1 class="font-semibold">Movies</h1>
+      </div>
+      <div
+        class="rounded-full md:h-auto h-5 md:border-2 border-[1px] md:w-[50vw] w-[90vw] flex justify-center items-center gap-5"
+      >
+        <input
+          type="search"
+          placeholder=" Find movie"
+          class="md:w-[80%] w-[70%] md:p-2 bg-transparent focus:outline-none  md:text-base text-[8px] search"
+        />
+
+        <i
+          class="fa-solid fa-magnifying-glass text-secondary md:text-lg text-[8px]"
+        ></i>
+      </div>
+      <button class="md:text-2xl text-xs" id="drawer-btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+    <div
+      id="drawer"
+      class="fixed z-50 md:w-1/4 w-3/4 h-screen bg-black shadow-xl md:-left-1/3 -left-3/4 transition-all ease-in-out duration-500"
+    >
+      <ul
+        id="menu"
+        class="w-full flex flex-col justify-center items-center mt-[20vh] gap-5 font-homenaje md:text-3xl text-xl"
+      >
+        <div
+          class="flex justify-center items-center gap-1 md:text-4xl text-3xl text-secondary md:pb-20 pb-8"
+        >
+          <i class="fa-solid fa-film"></i>
+          <h1 class="font-semibold">Movies</h1>
+        </div>
+        <li class="hover:text-secondary cursor-pointer">Now Playing</li>
+        <li class="hover:text-secondary cursor-pointer">Popular</li>
+        <li class="hover:text-secondary cursor-pointer">top rated</li>
+        <li class="hover:text-secondary cursor-pointer">Trending</li>
+        <li class="hover:text-secondary cursor-pointer">Upcoming</li>
+        <a href="#contact">
+          <li class="hover:text-secondary cursor-pointer">Contact us</li>
+        </a>
+       
+      </ul>
+    </div>
+    <section id="home" class="w-screen md:h-[80vh] h-[50vh] overflow-hidden">
+      <div class="h-full w-screen relative flex">
+        <div class="image-mask absolute w-full h-full z-20">
+          <div
+            class="h-full w-full bg-red-00 flex justify-center items-end pb-10"
+          >
+            <div class="">
+              <div
+                class="md:w-[80vw] w-[85vw] grid md:grid-cols-5 grid-cols-3 md:gap-5 gap-1 details"
+              >
+                <div
+                  class="md:h-80 h-36 col-span-1 rounded overflow-hidden imagecontainer"
+                >
+                  <img
+                    src=""
+                    alt=""
+                    class="object-cover h-full w-full"
+                  />
+                </div>
+
+                <div
+                  class="flex flex-col justify-center md:gap-4 gap-2 col-span-2 md:col-span-4 font-Dosis text-[8px]"
+                >
+                  <h2 class="text-white font-homenaje md:text-3xl text-sm">
+               
+                  </h2>
+                  <p class="md:text-base text-[6px]">
+                   
+                  </p>
+                  <div class="info flex md:gap-10 gap-4"></div>
+                  <a href="" class="md:mt-10">
+                    <button
+                      class="md:text-base bg-white/10 hover:bg-secondary hover:text-black hover:font-normal transition-all ease-in-out duration-500 rounded-full md:border-2 border-[1px] border-secondary text-white md:py-1 md:px-4 py-1 px-2 font-thin"
+                    >
+                      Home page
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="https://images5.alphacoders.com/131/1314090.jpeg"
+          alt=""
+          class="w-full bg-home md:absolute object-cover -z-10"
+        />
+      </div>
+    </section>
+    <section id="movies" class="w-screen bg-black">
+      <div
+        class="w-[90vw] mx-auto flex md:text-2xl text-base items-center gap-2 py-4"
+      >
+        <i class="fa-solid fa-clock text-secondary"></i>
+        <p class="font-homenaje">Now playing movies</p>
+      </div>
+
+      <div class="moviesList w-[90vw] mx-auto">
+        <div
+          class="font-extrathin font-Dosis moviesContainer grid md:grid-cols-7 md:gap-10 grid-cols-3 gap-3"
+        ></div>
+      </div>
+    </section>
+    <section id="contact" class="md:mb-10 md:mt-20 mt-0 mb-0 bg-black">
+      <div class="w-[90vw] h-full mx-auto grid md:grid-cols-2 md:grid-rows-1 grid-rows-3 gap-10 text-base">
+        <div class="w-full h-full  flex md:justify-end   row-span-2 md:row-span-1">
+          <form
+          class="h-[50vh] md:h-auto  self-end md:self-auto bg-white/10 rounded-lg md:p-10 md:w-[80%] w-[95%] flex flex-col justify-center items-center md:gap-3 gap-1 "
+          >
+          <div class="md:w-[80%] w-[95%]">
+            <input
+            type="text"
+            id="name"
+            placeholder=" Enter your name"
+            class="w-full rounded md:p-2 bg-black  md:text-base text-[8px] "
+          />
+          <p id="nameMsg" class="text-red-500 md:text-xs text-[6px]"></p>
+          </div>
+        
+            <div class="md:w-[80%] w-[95%]">
+              <input
+              type="email"
+              id="email"
+              placeholder=" Enter your email"
+              class="w-full  rounded md:p-2 bg-black  md:text-base text-[8px]  "
+            />
+              <p id="emailMsg" class="text-red-500 md:text-xs text-[6px]"></p>
+            </div>
+
+          <div class="md:w-[80%] w-[95%] ">
+            <input
+              type="number"
+              id="phone"
+              placeholder=" Enter your phone number"
+              class="w-full rounded md:p-2 bg-black md:text-base text-[8px] "
+            />
+            <p id="phoneMsg" class="text-red-500 md:text-xs text-[6px]"></p>
+          </div>
+            
+            <div class="md:w-[80%] w-[95%] flex flex-col">
+              <input
+              type="number"
+              id="age"
+              min="6"
+              max="120"
+              placeholder=" Enter your age"
+              class=" rounded md:p-2 bg-black  md:text-base text-[8px] "
+            />
+            <p id="ageMsg" class="text-red-500 md:text-xs text-[6px]"></p>
+             
+            </div>
+          
+            <div class="md:w-[80%] w-[95%] rounded">
+              <div class="flex items-center w-full border-[1px] border-transparent focus-within:border-white  rounded bg-black text-white md:text-base text-[8px] ">
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Enter your password"
+                  class=" md:p-2 bg-black w-[90%] focus:outline-none rounded"
+                />
+                <i id="passwordbtn" class="fa-solid cursor-pointer fa-eye"></i>
+              </div>
+              <p id="passwordMsg" class="text-red-500 md:text-xs text-[6px]"></p>
+            </div>
+
+          <div class="md:w-[80%] w-[95%] rounded">
+            <div class="flex items-center w-full border-[1px] border-transparent focus-within:border-white  rounded bg-black text-white md:text-base text-[8px]  ">
+              <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Validate your password"
+                class="md:p-2 bg-black w-[90%] focus:outline-none rounded"
+              />
+              <i id="confirmbtn" class="fa-solid fa-eye  cursor-pointer"></i>
+            </div>
+            <p id="confirmPasswordMsg" class="text-red-500 md:text-xs text-[6px]"></p>
+          </div>
+           
+            
+            <div class="md:w-[80%] w-[95%] flex justify-start">
+              <input
+              type="submit"
+              value="Submit"
+              class="md:text-base text-xs bg-white/10 hover:bg-secondary hover:text-black hover:font-normal transition-all ease-in-out duration-500 rounded md:border-2 border-[1px] border-secondary text-white md:py-1 md:px-4 py-1 px-2 font-thin"
+              >
+                
+              </input>
+            </div>
+          </form>
+          </div>
+          <div class="w-full md:h-full flex justify-start items-center ">
+            <div class="flex flex-col gap-5 md:text-base text-xs  ">
+              <div class="flex gap-2  items-center">
+                 <div class="md:h-12 md:w-12  h-10 w-8 flex justify-center items-center  text-secondary bg-white/10  rounded">
+                 <i class="fa-solid fa-phone"></i>
+               </div>
+
+                 <p>(+20) 123 456 789</p>
+
+              </div>
+                  <div class="flex gap-2 items-center">                  
+                    <div class="md:h-12 md:w-12  h-10 w-8 flex justify-center items-center  text-secondary bg-white/10  rounded">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                    <p>info@movieticket.com</p>
+                  </div>
+                  <div class="flex gap-2 items-center">
+                    <div class="md:h-12 md:w-12  h-10 w-8 flex justify-center items-center  text-secondary bg-white/10  rounded">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                    <p> 5th Settlement, New Cairo, Egypt</p>
+                  </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </section>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>

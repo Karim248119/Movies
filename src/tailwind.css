@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.image-mask {
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: rgb(0, 0, 0) 10px -60px 90px -2px inset;
+}
+
+.card:hover {
+  border: solid 1px #ccff00;
+}
+
+@media (max-width: 600px) {
+  .image-mask {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: rgb(0, 0, 0) 1px -150px 1116px -28px inset;
+  }
+}
+
+.search:focus {
+  outline: none !important;
+}
