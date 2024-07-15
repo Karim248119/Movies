@@ -631,6 +631,9 @@ video {
 .w-screen {
   width: 100vw;
 }
+.w-\[94\%\] {
+  width: 94%;
+}
 .cursor-pointer {
   cursor: pointer;
 }
